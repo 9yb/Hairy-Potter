@@ -1,7 +1,7 @@
 ﻿#This code is written to automatically playing Otoware-Potter using BadUSB
 
 If (-not(Test-Path C:\potter\audio.wav)){
-    New-Item -ItemType Directory -Path C:\potter -ErrorAction stop
+    #New-Item -ItemType Directory -Path C:\potter -ErrorAction stop
     $TargetPath = Join-Path C:\potter audio.wav -ErrorAction Stop
     Invoke-WebRequest -Uri https://github.com/9yb/Hairy-Potter/raw/master/potter.wav -OutFile $TargetPath -Verbose
 }
